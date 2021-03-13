@@ -1,7 +1,5 @@
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.sql.SQLOutput;
+import java.util.function.*;
 
 public class Foo {
 
@@ -70,5 +68,39 @@ public class Foo {
         Predicate<Integer> isEven = (i) -> i%2 == 0;
         System.out.println("Predicate :" + isEven.test(2));
 
+        Foo foo = new Foo();
+        foo.run();
+    }
+
+    private void run(){
+        int baseNumber = 10;
+
+        // 익명 클래스
+        /*Consumer<Integer> integerConsumer = new Consumer<Integer>() {
+            @Override
+            public void accept(Integer integer) {
+                int baseNumber = 11;
+                System.out.println(baseNumber);
+            }
+        };
+
+        // 로컬 클래스
+        class LocalClass{
+            void printBaseNumber() {
+                int baseNumber = 11;
+                System.out.println(baseNumber);
+            }
+        }*/
+
+        /*
+        * 익명 클래스와 로컬 클래스 안에서 상위 스코프의 변수의 값을 재정의하면 덮어쓰지만 람다는 같은 스코프로 다루기에 재정의가 불가능하다.
+        **/
+
+        // 람다
+        IntConsumer printInt = (i) -> {
+            System.out.println(i + baseNumber);
+        };
+
+        printInt.accept(10);
     }
 }
