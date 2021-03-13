@@ -1,3 +1,5 @@
+package functionWithLamda;
+
 @FunctionalInterface
 public interface RunSomething {
 

@@ -1,3 +1,5 @@
+package functionWithLamda;
+
 public class Greeting {
 
     private String name;

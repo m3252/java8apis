@@ -1,4 +1,5 @@
-import java.sql.SQLOutput;
+package functionWithLamda;
+
 import java.util.function.*;
 
 public class Foo {
@@ -6,7 +7,7 @@ public class Foo {
     public static void main(String[] args){
 
         // 익명 내부 클래스 anonymous inner class java 8 이전
-//        RunSomething beforeRunSomething = new RunSomething() {
+//        functionWithLamda.RunSomething beforeRunSomething = new functionWithLamda.RunSomething() {
 //            @Override
 //            public void doIt() {
 //                System.out.println("moon");
@@ -15,7 +16,7 @@ public class Foo {
 //        };
 
         // 람다식 java 8 이후
-//        RunSomething afterRunSomething = () -> {
+//        functionWithLamda.RunSomething afterRunSomething = () -> {
 //            System.out.println("moon");
 //            System.out.println("seungchan");
 //        };
