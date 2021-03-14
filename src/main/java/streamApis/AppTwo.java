@@ -1,4 +1,4 @@
-package streamApi;
+package streamApis;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package streamApi;
+package streamApis;
 
 public class OnlineClass {
 
